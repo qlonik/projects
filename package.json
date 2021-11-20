@@ -2,8 +2,10 @@
   "name": "projects",
   "private": true,
   "scripts": {
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.18.0"
+    "@changesets/cli": "^2.18.0",
+    "husky": "^7.0.4"
   }
 }
