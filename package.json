@@ -4,5 +4,6 @@
   "scripts": {
   },
   "devDependencies": {
+    "@changesets/cli": "^2.18.0"
   }
 }
