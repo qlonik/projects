@@ -12,6 +12,19 @@ importers:
       husky: 7.0.4
       prettier: 2.5.1
 
+  packages/semantic-commit-to-changeset:
+    specifiers:
+      '@effect-ts/core': ^0.48.6
+      '@effect-ts/node': ^0.32.0
+      '@effect-ts/system': ^0.45.6
+      typescript: ^4.5.4
+    dependencies:
+      '@effect-ts/core': 0.48.6
+      '@effect-ts/node': 0.32.0_@effect-ts+core@0.48.6
+      '@effect-ts/system': 0.45.6
+    devDependencies:
+      typescript: 4.5.4
+
 packages:
 
   /@babel/code-frame/7.16.0:
@@ -211,6 +224,24 @@ packages:
       human-id: 1.0.2
       prettier: 1.19.1
     dev: true
+
+  /@effect-ts/core/0.48.6:
+    resolution: {integrity: sha512-Y4MyFgxYwrl1Rqa56ZTIsv/K32wq7YWNsOZ/JPIJNsSUrhZjUmDe45FQdlTTKQg3OjYtIx5c6q0Nu8pdIKMWAA==}
+    dependencies:
+      '@effect-ts/system': 0.45.6
+    dev: false
+
+  /@effect-ts/node/0.32.0_@effect-ts+core@0.48.6:
+    resolution: {integrity: sha512-VbkObHWKUdpeQ6oXjfjXbhp9bbAmT+tEZDwpB1I/2SWGjEKCEpjZxhB3hMOTVRX3cN1a5R/uPojLscoItX7T7A==}
+    peerDependencies:
+      '@effect-ts/core': ^0.48.6
+    dependencies:
+      '@effect-ts/core': 0.48.6
+    dev: false
+
+  /@effect-ts/system/0.45.6:
+    resolution: {integrity: sha512-m0sXus1Ca/WtIezAbvGNZGV0GeqQjApxxYPN1AH/Q6SKyOgqcAcwhFJTltI48gEnYnNiqMBJVri+2ytH8PkxIw==}
+    dev: false
 
   /@manypkg/find-root/1.1.0:
     resolution: {integrity: sha512-mki5uBvhHzO8kYYix/WRy2WX8S3B5wdVSc9D6KcU5lQNglP2yt58/VfLuAK49glRXChosY8ap2oJ1qgma3GUVA==}
@@ -1338,6 +1369,12 @@ packages:
   /type-fest/0.8.1:
     resolution: {integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==}
     engines: {node: '>=8'}
+    dev: true
+
+  /typescript/4.5.4:
+    resolution: {integrity: sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
     dev: true
 
   /universalify/0.1.2:

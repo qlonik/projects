@@ -1,0 +1,24 @@
+{
+  "name": "@qlonik/semantic-commit-to-changeset",
+  "version": "0.1.0",
+  "description": "Convert valid semantic-commit message to changeset file",
+  "keywords": [],
+  "author": "qlonik (https://github.com/qlonik)",
+  "license": "MIT",
+  "bin": "dist/bin.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@effect-ts/core": "^0.48.6",
+    "@effect-ts/node": "^0.32.0",
+    "@effect-ts/system": "^0.45.6"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
+}
