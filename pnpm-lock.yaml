@@ -6,9 +6,11 @@ importers:
     specifiers:
       '@changesets/cli': ^2.18.0
       husky: ^7.0.4
+      prettier: ~2.5.1
     devDependencies:
       '@changesets/cli': 2.18.0
       husky: 7.0.4
+      prettier: 2.5.1
 
 packages:
 
@@ -1037,6 +1039,12 @@ packages:
   /prettier/1.19.1:
     resolution: {integrity: sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==}
     engines: {node: '>=4'}
+    hasBin: true
+    dev: true
+
+  /prettier/2.5.1:
+    resolution: {integrity: sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==}
+    engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
 
