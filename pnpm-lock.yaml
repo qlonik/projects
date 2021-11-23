@@ -5,10 +5,12 @@ importers:
   .:
     specifiers:
       '@changesets/cli': ^2.18.0
+      '@qlonik/semantic-commit-to-changeset': workspace:*
       husky: ^7.0.4
       prettier: ~2.5.1
     devDependencies:
       '@changesets/cli': 2.18.0
+      '@qlonik/semantic-commit-to-changeset': link:packages/semantic-commit-to-changeset
       husky: 7.0.4
       prettier: 2.5.1
 

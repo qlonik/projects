@@ -1,0 +1,14 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# We are doing ps twice here, in order to get a parent command of our parent,
+# since we have to skip through husky.sh script
+COMMAND=$(ps -o ppid= -p $PPID | xargs ps -o command= -p)
+
+if echo "$COMMAND" | grep -qe "--amend"; then
+  AMENDING=true
+else
+  AMENDING=false
+fi
+
+exec "./node_modules/.bin/semantic-commit-to-changeset" "$1" "$AMENDING"
