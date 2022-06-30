@@ -30,7 +30,10 @@ jobs:
           cache: "pnpm"
 
       - name: Install Dependencies
-        run: pnpm install -w
+        run: pnpm install
+
+      - name: Run tests
+        run: pnpm test
 
       # Produces 'applied' output. It indicates if the rest of the workflow
       # should run.
@@ -55,12 +58,13 @@ jobs:
             exit 1
           fi
 
-      - name: Rebuild packages
+      - name: Rebuild and test packages
         if: steps.version.outputs.applied == 'true'
         run: |
           pnpm install
           pnpm run -r build
           pnpm install
+          pnpm test
 
       - name: Show changed files
         if: steps.version.outputs.applied == 'true'
