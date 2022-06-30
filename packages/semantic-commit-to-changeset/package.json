@@ -1,6 +1,6 @@
 {
   "name": "@qlonik/semantic-commit-to-changeset",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Convert valid semantic-commit message to changeset file",
   "keywords": [],
   "author": "qlonik (https://github.com/qlonik)",
