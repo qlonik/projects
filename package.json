@@ -5,7 +5,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.18.0",
+    "@changesets/cli": "^2.23.0",
     "@qlonik/semantic-commit-to-changeset": "workspace:*",
     "husky": "^7.0.4",
     "prettier": "~2.5.1"
