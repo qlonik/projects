@@ -2,7 +2,7 @@
   "name": "projects",
   "private": true,
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "pnpm --filter ./packages/semantic-commit-to-changeset run build && husky install",
     "build": "pnpm recursive run build",
     "test": "vitest"
   },
