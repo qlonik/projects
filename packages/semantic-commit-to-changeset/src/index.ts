@@ -1,6 +1,6 @@
 import * as L from "@effect-ts/core/Effect/Layer"
 import * as O from "@effect-ts/core/Option"
-import { flow, pipe } from "@effect-ts/core/Function"
+import { constant, flow, pipe } from "@effect-ts/core/Function"
 import * as path from "path"
 import * as A from "@effect-ts/core/Collections/Immutable/Array"
 import * as T from "@effect-ts/core/Effect"
@@ -11,6 +11,7 @@ import { loadCurrentCommitDescriptor } from "./impl/load-current-commit-descript
 import { loadPreviousCommitDescriptor } from "./impl/load-previous-commit-descriptor"
 import { makeLiveGitActions } from "./bindings/git-actions"
 import { getPackages } from "./bindings/get-packages"
+import { findIsAmending } from "./impl/find-is-amending"
 
 const dependencies = flow(
   Git.makeLiveSimpleGit,
@@ -19,20 +20,24 @@ const dependencies = flow(
 )
 
 export const program = pipe(
-  T.succeedWith(() => process.cwd()),
-  T.zipPar(
+  T.tuplePar(
+    T.succeedWith(() => process.cwd()),
     pipe(
       T.succeedWith(() => process.argv),
       T.map(A.dropLeft(2)),
-      T.chain(([commitMsgPath, isAmending]) =>
-        isAmending === "true" || isAmending === "false"
-          ? T.succeed({ commitMsgPath, isAmending: isAmending === "true" })
-          : T.dieMessage("Incorrect value of isAmending parameter"),
+      T.chain((args) =>
+        args.length === 0
+          ? T.dieMessage("No arguments passed to the script")
+          : T.succeed(args[0]),
       ),
+    ),
+    pipe(
+      findIsAmending,
+      T.orElse(constant(T.dieMessage("Could not find parent git command"))),
     ),
   ),
 
-  T.chain(({ tuple: [projectPath, { commitMsgPath, isAmending }] }) =>
+  T.chain(({ tuple: [projectPath, commitMsgPath, isAmending] }) =>
     pipe(
       getPackages(projectPath),
 
