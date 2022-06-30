@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "prepare": "husky install",
+    "build": "pnpm recursive run build",
     "test": "vitest"
   },
   "devDependencies": {
