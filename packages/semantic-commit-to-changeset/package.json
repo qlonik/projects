@@ -5,10 +5,11 @@
   "keywords": [],
   "author": "qlonik (https://github.com/qlonik)",
   "license": "MIT",
-  "bin": "dist/bin.js",
+  "bin": "bin/bin.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
+    "bin",
     "dist"
   ],
   "publishConfig": {
