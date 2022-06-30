@@ -30,9 +30,11 @@ importers:
       '@types/common-tags': ^1.8.1
       '@types/conventional-commits-parser': ^3.0.2
       '@types/node': ^16.11.7
+      '@types/ps-node': ^0.1.1
       common-tags: ^1.8.2
       conventional-commits-parser: ^3.2.3
       is-subdir: ^1.2.0
+      ps-node: ^0.1.6
       simple-git: ^2.48.0
       ts-pattern: ^3.3.3
       typescript: ^4.5.4
@@ -46,6 +48,7 @@ importers:
       common-tags: 1.8.2
       conventional-commits-parser: 3.2.3
       is-subdir: 1.2.0
+      ps-node: 0.1.6
       simple-git: 2.48.0
       ts-pattern: 3.3.3
     devDependencies:
@@ -53,6 +56,7 @@ importers:
       '@types/common-tags': 1.8.1
       '@types/conventional-commits-parser': 3.0.2
       '@types/node': 16.11.9
+      '@types/ps-node': 0.1.1
       typescript: 4.5.4
 
 packages:
@@ -385,6 +389,10 @@ packages:
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
 
+  /@types/ps-node/0.1.1:
+    resolution: {integrity: sha512-t/8CsMBQ1ekBIb+Soqxce6w8M7yt0jRoXgsWHkS66VQ9OcMDQeoRLzz+gGpVeBc8pVskOTwRbCqHxDOGFwkgsg==}
+    dev: true
+
   /@types/semver/6.2.3:
     resolution: {integrity: sha512-KQf+QAMWKMrtBMsB8/24w53tEsxllMj6TuA80TT/5igJalLI/zm0L3oXRbIAl4Ohfc85gyHX/jhMwsVkmhLU4A==}
     dev: true
@@ -568,6 +576,10 @@ packages:
   /common-tags/1.8.2:
     resolution: {integrity: sha512-gk/Z852D2Wtb//0I+kRFNKKE9dIIVirjoqPoA1wJU+XePVXZfGeBpk45+A1rKO4Q43prqWBNY/MiIeRLbPWUaA==}
     engines: {node: '>=4.0.0'}
+    dev: false
+
+  /connected-domain/1.0.0:
+    resolution: {integrity: sha512-lHlohUiJxlpunvDag2Y0pO20bnvarMjnrdciZeuJUqRwrf/5JHNhdpiPIr5GQ8IkqrFj5TDMQwcCjblGo1oeuA==}
     dev: false
 
   /conventional-commits-parser/3.2.3:
@@ -1664,6 +1676,12 @@ packages:
     hasBin: true
     dev: true
 
+  /ps-node/0.1.6:
+    resolution: {integrity: sha512-w7QJhUTbu70hpDso0YXDRNKCPNuchV8UTUZsAv0m7Qj5g85oHOJfr9drA1EjvK4nQK/bG8P97W4L6PJ3IQLoOA==}
+    dependencies:
+      table-parser: 0.1.3
+    dev: false
+
   /pseudomap/1.0.2:
     resolution: {integrity: sha512-b/YwNhb8lk1Zz2+bXXpS/LK9OisiZZ1SNsSLxN1x2OXVEhW2Ckr/7mWE5vrC1ZTiJlD9g19jWszTmJsB+oEpFQ==}
     dev: true
@@ -1960,6 +1978,12 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
     dev: true
+
+  /table-parser/0.1.3:
+    resolution: {integrity: sha512-LCYeuvqqoPII3lzzYaXKbC3Forb+d2u4bNwhk/9FlivuGRxPE28YEWAYcujeSlLLDlMfvy29+WPybFJZFiKMYg==}
+    dependencies:
+      connected-domain: 1.0.0
+    dev: false
 
   /term-size/2.2.1:
     resolution: {integrity: sha512-wK0Ri4fOGjv/XPy8SBHZChl8CM7uMc5VML7SqiQ0zG7+J5Vr+RMQDoHa2CNT6KHUnTGIXH34UDMkPzAUyapBZg==}
