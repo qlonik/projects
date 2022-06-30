@@ -11,4 +11,4 @@ else
   AMENDING=false
 fi
 
-exec "./node_modules/.bin/semantic-commit-to-changeset" "$1" "$AMENDING"
+exec "./node_modules/.bin/sc2c-commit-msg" "$1" "$AMENDING"

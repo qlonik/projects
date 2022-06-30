@@ -5,7 +5,9 @@
   "keywords": [],
   "author": "qlonik (https://github.com/qlonik)",
   "license": "MIT",
-  "bin": "bin/bin.js",
+  "bin": {
+    "sc2c-commit-msg": "bin/commit-msg.js"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
